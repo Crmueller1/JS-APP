@@ -1,26 +1,42 @@
-let pokemonList = [
-    { name: "Charmander", height: "2", type: "fire" },
-    { name: "Squirtle", height: "1.08", type: "water" },
-    { name: "Bulbasaur", height: "2.04", type: ["grass", "poison"] }
-];
+let pokemonRepository = (function() {
 
+    let pokemonList = [
+        { name: "<u> Charmander </u>", height: "2", type: " Fire" },
+        { name: "<u> Squirtle </u>", height: "1.08", type: " Water" },
+        { name: "<u>Bulbasaur </u>", height: "2.04", type: [" Grass", " Poison"] }
+    ];
 
-
-
-// Initialization= let i=0,  
-// Condition= i < pokemonList.length;
-// Action = i++ which is  i=i+1
-
-for (let i = 0; i < pokemonList.length; i++) {
-
-    document.write(pokemonList[i].name + " " + "(Height: " +
-        pokemonList[i].height + ", Type: " + pokemonList[i].type + ") ");
-
-    // if the pokemon is greater than or equal to, write "This pokemon is huge!!"
-    if (pokemonList[i].height > 1.5) {
-
-        document.write('This pokemon is huge!!');
+    // function to return all items in the pokemonList array.
+    function getAll() {
+        return pokemonList;
     }
-    // line breaks twice after each document.write to make it easier to read
-    document.write('<br><br>');
+    //function to add new pokemon to pokemonList array.
+    function add(newPokemon) {
+        if (typeof newPokemon);
+        else {
+            console.log('Must be object - did not add');
+        }
+    }
+
+
+    return {
+        getAll: getAll,
+        add: add
+    };
+
+})()
+
+
+function printArrayDetails(list) {
+    list.forEach(function(pokemon) {
+        if (pokemon.height >= 1.5) {
+
+            document.write(pokemon.name + ' </br>Height: ' + pokemon.height + '</br>  Type:' + pokemon.type + ' This pokemon is huge!!</br></br>');
+        } else {
+            document.write(pokemon.name + ' </br>Height: ' + pokemon.height + '</br>  Type:' + pokemon.type + '</br></br> ');
+
+        }
+    });
 }
+
+printArrayDetails(pokemonRepository.getAll());
