@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.butn {
+    background-color: rgb(22, 20, 20);
+    border: 1px black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(182, 175, 175);
+    color: black;
+    border: 2px solid rgb(58, 211, 27);
+}
+
+h1 {
+    color: red;
+}
