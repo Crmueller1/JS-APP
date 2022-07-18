@@ -45,7 +45,6 @@ let pokemonRepository = (function() {
                     detailsUrl: item.url
                 };
                 add(pokemon);
-                //console.log(pokemon);
             });
         }).catch(function(e) {
             console.error(e);
@@ -157,43 +156,3 @@ pokemonRepository.loadList().then(function() {
         pokemonRepository.addListItem(pokemon);
     });
 });
-
-
-
-
-
-
-
-
-//[
-//  { name: "Charmander", height: "2", type: " Fire" },
-//{ name: "Squirtle ", height: "1.08", type: " Water" },
-//{ name: "Bulbasaur", height: "2.04", type: [" Grass", " Poison"] }
-//];
-
-
-
-//function to add new pokemon to pokemonList array.
-
-
-// function to return all items in the pokemonList array.
-
-
-
-
-
-
-
-
-
-
-
-
-
-//return {
-//  getAll: getAll,
-//add: add,
-//addListItem: addListItem
-//};
-
-//})()
